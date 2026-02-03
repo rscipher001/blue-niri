@@ -2,25 +2,12 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 name: niri
-# description will be included in the image's metadata
-description: This is my personal OS image.
+description: Niri and quickshell.
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: 43 # latest is also supported if you want new updates ASAP
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
-# modules:
-#   - type: akmods
-#     base: main
-#     nvidia-driver: main
-
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
+modules:
   - type: dnf
     repos:
       copr:
@@ -33,13 +20,5 @@ image-version: 43 # latest is also supported if you want new updates ASAP
       packages:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-
-  # - type: default-flatpaks
-  #   configurations:
-  #     - notify: true # Send notification after install/uninstall is finished (true/false)
-  #       scope: system
-  #       install: # system flatpaks we want all users to have and not remove
-  #         - org.gnome.Loupe
-  #     - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
