@@ -12,20 +12,14 @@ modules:
     repos:
       copr:
         - errornointernet/quickshell
-        - scottames/ghostty
     install:
-      install-weak-deps: false
+      install-weak-deps: true
       packages:
-        - ly
-        - ghostty
+        - gdm
         - niri
-        - glycin-thumbnailer
         - nautilus
         - quickshell
         - virt-manager
-        - libvirt-daemon
-        - qemu-kvm
-        - libvirt-daemon-driver-qemu
         - xdg-desktop-portal-gnome
 
     remove:
