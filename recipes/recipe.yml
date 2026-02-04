@@ -23,6 +23,10 @@ modules:
         - quickshell
         - virt-manager
         - libvirt-daemon
+        - libvirt-daemon-driver-qemu
+        - qemu-kvm
+        - glycin-thumbnailer
+        - tuned
         - xdg-desktop-portal-gnome
 
     remove:
