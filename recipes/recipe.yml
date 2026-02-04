@@ -12,10 +12,17 @@ modules:
     repos:
       copr:
         - errornointernet/quickshell
+        - scottames/ghostty
     install:
+      install-weak-deps: false
       packages:
+        - gdm
+        - ghostty
         - niri
         - quickshell
+        - virt-manager
+        - xdg-desktop-portal-gnome
+
     remove:
       packages:
         - firefox
