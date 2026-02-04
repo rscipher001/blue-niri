@@ -14,14 +14,18 @@ modules:
         - errornointernet/quickshell
         - scottames/ghostty
     install:
+      install-weak-deps: false
       packages:
-        - gdm
+        - ly
         - ghostty
         - niri
+        - glycin-thumbnailer
         - nautilus
         - quickshell
         - virt-manager
         - libvirt-daemon
+        - qemu-kvm
+        - libvirt-daemon-driver-qemu
         - xdg-desktop-portal-gnome
 
     remove:
