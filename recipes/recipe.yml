@@ -19,8 +19,10 @@ modules:
         - gdm
         - ghostty
         - niri
+        - nautilus
         - quickshell
         - virt-manager
+        - libvirt-daemon
         - xdg-desktop-portal-gnome
 
     remove:
