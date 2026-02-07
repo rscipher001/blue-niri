@@ -12,12 +12,13 @@ modules:
     repos:
       copr:
         - errornointernet/quickshell
+        - yalter/niri-git
     install:
       install-weak-deps: true
       packages:
         - sddm
         - niri
-        - nautilus
+        - dolphin
         - quickshell
         - virt-manager
         - brightnessctl
