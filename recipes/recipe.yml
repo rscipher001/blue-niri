@@ -19,6 +19,11 @@ modules:
 
   - type: script
     snippets:
-      - "rm /usr/share/thumbnailers🔒/glycin-heif.thumbnailer"
+      - "rm /usr/share/thumbnailers/glycin-heif.thumbnailer"
+
+  - type: brew
+    auto-update: false
+    auto-upgrade: false
+    brew-analytics: false
 
   - type: signing
