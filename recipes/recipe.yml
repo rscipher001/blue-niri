@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/rscipher001/niri
 name: niri
-description: A functional silverblue image
+description: A minimal and functional silverblue based image
 base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia-open
 image-version: latest
 
@@ -11,20 +11,10 @@ modules:
     install:
       install-weak-deps: true
       packages:
-        - libheif-tools
         - virt-manager
 
   - type: kargs
     kargs:
       - amdgpu.abmlevel=0
-
-  - type: script
-    snippets:
-      - "rm /usr/share/thumbnailers/glycin-heif.thumbnailer"
-
-  # - type: brew
-  #   auto-update: false
-  #   auto-upgrade: false
-  #   brew-analytics: false
 
   - type: signing
