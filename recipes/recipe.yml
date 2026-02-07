@@ -8,12 +8,17 @@ image-version: latest
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - errornointernet/quickshell
     install:
       install-weak-deps: true
       packages:
         - virt-manager
+
+  - type: kargs
+    kargs:
+      - amdgpu.abmlevel=0
+
+  - type: script
+    snippets:
+      - "rm /usr/share/thumbnailers🔒/glycin-heif.thumbnailer"
 
   - type: signing
