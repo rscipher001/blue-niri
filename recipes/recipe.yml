@@ -11,6 +11,7 @@ modules:
     install:
       install-weak-deps: true
       packages:
+        - libheif-tools
         - virt-manager
 
   - type: kargs
@@ -21,9 +22,9 @@ modules:
     snippets:
       - "rm /usr/share/thumbnailers/glycin-heif.thumbnailer"
 
-  - type: brew
-    auto-update: false
-    auto-upgrade: false
-    brew-analytics: false
+  # - type: brew
+  #   auto-update: false
+  #   auto-upgrade: false
+  #   brew-analytics: false
 
   - type: signing
