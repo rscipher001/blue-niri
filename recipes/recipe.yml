@@ -16,4 +16,4 @@ modules:
       packages:
         - virt-manager
 
-     - type: signing
+  - type: signing
