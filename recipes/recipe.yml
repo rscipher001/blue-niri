@@ -22,6 +22,9 @@ modules:
         - quickshell
         - virt-manager
         - brightnessctl
+        - qt6ct
+        - thunar
+        - protobuf
         - wlsunset
         - xdg-desktop-portal-gnome
 
