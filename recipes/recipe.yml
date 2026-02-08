@@ -11,7 +11,9 @@ modules:
     install:
       install-weak-deps: true
       packages:
+        - powertop
         - virt-manager
+        - tlp
 
   - type: kargs
     kargs:
